@@ -10,37 +10,53 @@
 
   <div class="container">
     <div class="microservice">
-      <div class="commit"></div>
       <h1>
         Microservice One:
         <span>In production</span>
       </h1>
-      <div class="stages two-stages">
+      <div class="stages">
         <div class="stage">
           <h2>Development</h2>
+          <div
+            class="commit hidden"
+            style="transform: translate3d(0%, 0, 0);">
+          </div>
         </div><!-- /stage -->
         <div class="stage">
           <h2>Staging</h2>
+          <div
+            class="commit hidden"
+            style="transform: translate3d(0%, 0, 0);"
+          >
+        </div>
         </div><!-- /stage -->
       </div><!-- /stages -->
       <div class="stage stage-lg">
         <h2>Production</h2>
+        <div
+          class="commit"
+          style="transform: translate3d(50%, 0, 0);"
+        >
+        </div>
       </div><!-- /stage-lg -->
     </div><!-- /microservice -->
 
-
-    <div class="microservice animate">
-      <div class="commit"></div>
+    <div class="microservice">
       <h1>
         Microservice Two
         <span>Building</span>
       </h1>
-      <div class="stages three-stages">
+      <div class="stages">
         <div class="stage">
           <h2>Development</h2>
         </div><!-- /stage -->
         <div class="stage">
           <h2>QE</h2>
+          <div
+            class="commit"
+            style="transform: translate3d(70%, 0, 0);"
+            >
+          </div>
         </div><!-- /stage -->
         <div class="stage">
           <h2>Security</h2>
@@ -52,13 +68,11 @@
     </div><!-- /microservice -->
 
     <div class="microservice">
-      <div class="commit commit-blue"></div>
-      <div class="commit commit-green"></div>
       <h1>
         Microservice Three:
         <span>Blue/Green</span>
       </h1>
-      <div class="stages four-stages">
+      <div class="stages">
         <div class="stage">
           <h2>Development</h2>
         </div><!-- /stage -->
@@ -74,16 +88,23 @@
       </div><!-- /stages -->
       <div class="stage stage-lg">
         <h2>Production</h2>
+        <div
+          class="commit commit-blue"
+          style="transform: translate3d(50%, 22%, 0);"
+        ></div>
+        <div
+          class="commit commit-green"
+          style="transform: translate3d(50%, -22%, 0);"
+        ></div>
       </div><!-- /stage-lg -->
     </div><!-- /microservice -->
 
     <div class="microservice">
-      <div class="commit commit-yellow"></div>
       <h1>
         Microservice Four:
         <span>In production</span>
       </h1>
-      <div class="stages three-stages">
+      <div class="stages">
         <div class="stage">
           <h2>Development</h2>
         </div><!-- /stage -->
@@ -96,18 +117,26 @@
       </div><!-- /stages -->
       <div class="stage stage-lg">
         <h2>Production</h2>
+        <div
+          class="commit commit-yellow"
+          style="transform: translate3d(50%, 0, 0);"
+        ></div>
       </div><!-- /stage-lg -->
     </div><!-- /microservice -->
 
     <div class="microservice">
-      <div class="commit commit-red"></div>
       <h1>
         Microservice Five:
         <span>Fail</span>
       </h1>
-      <div class="stages two-stages">
+      <div class="stages">
         <div class="stage">
           <h2>Development</h2>
+          <div
+            class="commit commit-red"
+            style="transform: translateX(60%);"
+          >
+        </div>
         </div><!-- /stage -->
         <div class="stage">
           <h2>Staging</h2>
