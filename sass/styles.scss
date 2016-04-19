@@ -201,3 +201,26 @@ body{
     animation: pulse-red 1s $easeInOutBack alternate infinite;
   }
 }
+
+// WebGL Canvas ==============
+
+#traffic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.coord-display {
+    position: absolute;
+    bottom: 0;
+    left: 48%;
+    font-family: monospace;
+}
+.internet-traffic-source {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+}
+

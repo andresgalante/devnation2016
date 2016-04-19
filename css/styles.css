@@ -145,3 +145,22 @@ body {
     border-color: #8b0000;
     -webkit-animation: pulse-red 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) alternate infinite;
             animation: pulse-red 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) alternate infinite; }
+
+#traffic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; }
+
+.coord-display {
+  position: absolute;
+  bottom: 0;
+  left: 48%;
+  font-family: monospace; }
+
+.internet-traffic-source {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0; }
