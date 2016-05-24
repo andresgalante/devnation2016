@@ -1,5 +1,5 @@
 {
-  "name": "demo-2016",
+  "name": "devnation-2016",
   "version": "1.0.0",
   "description": "Pipeline dashboard",
   "main": "Gulpfile.js",
@@ -10,13 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.10.1",
+    "font-awesome": "^4.6.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.1.1",
     "normalize.css": "^3.0.3"
-  },
-  "dependencies": {
-    "shader-particle-engine": "^1.0.5",
-    "three": "^0.75.0"
   }
 }
