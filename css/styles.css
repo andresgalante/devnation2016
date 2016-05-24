@@ -9,12 +9,10 @@ body {
 .game-container {
   overflow: hidden;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 100%;
   overflow: hidden; }
 
