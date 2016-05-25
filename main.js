@@ -25,7 +25,7 @@
       line.removeChild(container);
       addBall(line, container);
     } else {
-      missesElement.innerText = ++ misses;
+      missesElement.innerText = ++misses;
     }
   });
 }());
