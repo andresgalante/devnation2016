@@ -13,6 +13,9 @@
     setTimeout(function() {
       var newLine = line.cloneNode(true);
       newLine.appendChild(container);
+      var animationDuration = 0.75 * parseFloat(newLine.style.animationDuration);
+      newLine.style.animationDuration = animationDuration + 's';
+
       line.parentElement.replaceChild(newLine, line);
     }, 100)
   }
