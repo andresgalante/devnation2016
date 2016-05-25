@@ -26,11 +26,13 @@ body {
     -webkit-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0); } }
 
+.anim {
+  -webkit-animation: move 2s linear infinite;
+          animation: move 2s linear infinite; }
+
 .line {
   height: 100%;
   position: relative;
-  -webkit-animation: move 2s linear infinite;
-          animation: move 2s linear infinite;
   width: 100%; }
 
 .ball {
@@ -143,20 +145,20 @@ background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
             transform: perspective(10em) rotate3d(1, 0, 0, 10deg) scale3d(1.5, 3, 1);
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%; }
-  body.better .line {
+  body.better .anim {
     -webkit-animation: move-new 2s linear infinite;
             animation: move-new 2s linear infinite; }
-    body.better .line:nth-of-type(1) .ball {
+    body.better .anim:nth-of-type(1) .ball {
       background: #f0ab00; }
-    body.better .line:nth-of-type(2) .ball {
+    body.better .anim:nth-of-type(2) .ball {
       background: #f7bd7f; }
-    body.better .line:nth-of-type(3) .ball {
+    body.better .anim:nth-of-type(3) .ball {
       background: #a18fff; }
-    body.better .line:nth-of-type(4) .ball {
+    body.better .anim:nth-of-type(4) .ball {
       background: #ce0000; }
-    body.better .line:nth-of-type(5) .ball {
+    body.better .anim:nth-of-type(5) .ball {
       background: #92d400; }
-    body.better .line:nth-of-type(5) .ball {
+    body.better .anim:nth-of-type(5) .ball {
       background: #00b9e4; }
   body.better .ball {
     background: #7dbdc3; }
