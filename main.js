@@ -14,7 +14,7 @@
       var newLine = line.cloneNode(true);
       newLine.appendChild(container);
       line.parentElement.replaceChild(newLine, line);
-    }, 1000)
+    }, 100)
   }
 
   gameContainer.addEventListener('click', function(event) {
