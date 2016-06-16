@@ -4,23 +4,20 @@
 
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P|Bangers);
 
-$color-background:          #002235;
-$color-background-env:      #002a42;
-$color-text:                #7cdbf3;
-$color-teal:                #7dbdc3;
-$color-teal-dark:           #005c66;
-$color-violet:              #a18fff;
-$color-violet-dark:         #582fc0;
-$color-orange:              #f7bd7f;
-$color-orange-dark:         #b35c00;
-$color-yellow:              #f0ab00;
-$color-yellow-dark:         #b58100;
-$color-red:                 #ce0000;
-$color-red-dark:            #8b0000;
-$color-blue:                #00b9e4;
-$color-blue-dark:           #008bad;
-$color-green:               #92d400;
-$color-green-dark:          #2d7623;
+$color-background-start:    #16062a;
+$color-background-end:      #2f0b27;
+$color-pink-bg:             #85105e;
+$color-blue-bg:             #2f2997;
+$color-green-bg:            #51758b;
+
+$color-pink:                #fc2572;
+$color-blue:                #0054ff;
+$color-green:               #6cff00;
+$color-yellow:              #ffac38;
+
+$color-text:              #fff77d;
+
+
 $font-weight-light:         300;
 $font-weight-normal:        400;
 $font-weight-bold:          600;
@@ -35,17 +32,6 @@ html{
 }
 
 body{
-//  background:
-//  linear-gradient(to right,$color-background 70%, transparent),
-//  linear-gradient($color-background 18px, transparent 18px) 0 -2px,
-//  linear-gradient(90deg,  $color-background 18px, transparent 0px) -2px 0;
-//  background-color: darken($color-blue-dark, 20%);
-//  background-size: 100% 100%, 20px 20px, 20px 20px;
-//  color: $color-text;
-//  font-family: $font-family;
-//  font-weight: $font-weight-normal;
-//  font-size: $font-size-base;
-
   margin: 0;
   height: 100%;
 
@@ -73,7 +59,6 @@ body{
 }
 .line{
   height: 100%;
-  position: relative;
   width: 100%;
 }
 .ball{
@@ -81,14 +66,12 @@ body{
     background: #555;
     width: $ball-size;
     padding-top: $ball-size;
-    border-radius: 50% 50%;
+    border-radius: 50%;
 }
 
 // scoreboard ==============
 
 .scoreboard{
-//  color: #fff;
-//  background: rgba(0,0,0,.5);
   position: absolute;
   left: 20px;
   right: 20px;
@@ -101,7 +84,6 @@ body{
 // Settings container ==============================
 
 .settings-container{
-//  background: red;
   margin: 30px;
 }
 
@@ -148,77 +130,238 @@ button{
 body.better{
   text-align: center;
   font-family: $font-family;
-
-color: $color-text;
-
-background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
-radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
-radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
-background-size:110px 200px;
-background-repeat:repeat-x;
-
-/*
-background-color:black;
-background-image:
-radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-
-
+  color: $color-text;
   background-image:
-    linear-gradient(-135deg, mediumvioletred, transparent 50%),
-    linear-gradient(135deg, midnightblue, transparent 50%),
-    linear-gradient(45deg, indigo, transparent 30%),
-    linear-gradient(-45deg, firebrick, transparent 60%),
-    linear-gradient(to right, crimson, transparent 50%),
-    linear-gradient(to top, purple, transparent 50%),
-    radial-gradient(ellipse farthest-corner at 50% 40%, salmon, #000);
-    */
+
+
+
+
+    radial-gradient(circle at top, $color-background-start 0%, transparent 80%),
+    radial-gradient(circle at bottom, $color-background-start 0%, transparent 80%),
+    radial-gradient(circle at 50% 100%, $color-background-end 0%,transparent 30%),
+    linear-gradient(to left, $color-blue 0%, transparent 40%),
+    linear-gradient(to right, $color-pink 0%, transparent 40%),
+    linear-gradient(to bottom, $color-background-start, $color-background-end);
+
+
 
 
 .scoreboard{
-  position: static;
+  position: relative;
   bottom: auto;
-//  top: 20px;
+  z-index: 10;
+  left: 0;
+  margin-bottom: -100px;
+  padding-bottom: 100px;
+//  background: rgba(255,255,255,.4);
+  background-image://
+  radial-gradient( closest-side , $color-background-start 30%, transparent);
   h1, h2{
     margin: 0;
     line-height: 1.2em;
   }
+  h2{font-size: 1em;}
   p{
     display: none;
   }
 }
 
-.container{
-  position: relative;
-  transform:
+.game-container{
+//  background: rgba(255,255,255,.4);
+  background-image:
+  
+    radial-gradient(10px 10px at 20px 30px, #bf9af9, #bf9af9 1px, rgba(255,255,255,0.1) 1px, rgba(255,255,255,0)),
+
+    radial-gradient(20px 20px at 40px 70px, #bf9af9, #bf9af9 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0)),
+
+    radial-gradient(5px 5px at 50px 160px, #bf9af9, #bf9af9 2px, rgba(255,255,255,0.2) 2px, rgba(255,255,255,0)),
+    
+    radial-gradient(1px 1px at 90px 40px, #bf9af9, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 160px 120px, #bf9af9, rgba(0,0,0,0)),
+  
+  
+  linear-gradient(to right,
+    transparent 0%,
+    transparent 16%,
+    $color-pink 16%,
+    #fff 16.3%,
+    $color-pink 16.6%,
+    transparent 16.6%,
+    transparent 49.4%,
+    $color-green 49.4%,
+    #fff 49.7%,
+    $color-green 50%,
+    transparent 50%,
+    transparent 83%,
+    $color-blue 83%,
+    #fff 83.3%,
+    $color-blue 83.6%,
+    transparent 83.6%
+    ),
+  linear-gradient(to right,
+    transparent 0%,
+    transparent 11%,
+    $color-pink-bg 16%,
+    transparent 23%,
+    transparent 44%,
+    $color-green-bg 50%,
+    transparent 55%,
+    transparent 78%,
+    $color-blue-bg 83%,
+    transparent 89%
+    );
+
+  background-repeat: repeat, repeat, repeat, repeat,repeat, repeat, no-repeat, no-repeat;
+  background-size: 200px 200px, 200px 200px, 200px 200px,200px 200px,200px 200px,200px 200px, 100% 100%, 100% 100%;
+
+ transform:
     perspective(10em)
     rotate3d(1, 0, 0, 10deg)
-    scale3d(1.5, 3, 1);
+    scale3d(1.7,3.8, 1);
   transform-origin: 50% 100%;
-//  border-right:5px solid rgba(0,0,0,.2);
-//  border-left:5px solid rgba(0,0,0,.2);
-//  background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0) 70%);
-//  border-radius: 50% 50% 0 0;
-// background: red;
 }
 
-.anim{
-  animation: move-new 2s linear infinite;
-  &:nth-of-type(1) .ball{background: $color-yellow;}
-  &:nth-of-type(2) .ball{background: $color-orange;}
-  &:nth-of-type(3) .ball{background: $color-violet;}
-  &:nth-of-type(4) .ball{background: $color-red;}
-  &:nth-of-type(5) .ball{background: $color-green;}
-  &:nth-of-type(5) .ball{background: $color-blue;}
 
+@mixin ball-color($color) {
+  background-image:
+    radial-gradient(circle at 50% 50%, transparent 50%, $color),
+    radial-gradient(circle at 20% 0, transparent 20%, darken($color, 40%)),
+    linear-gradient(transparent 50%, $color),
+    radial-gradient(circle at 50% 120%, $color, darken($color, 10%) 10%, darken($color, 30%) 80%, darken($color, 60%) 100%);
+}
+
+.line{
+  &:nth-of-type(1) .ball{  @include ball-color($color-pink);}
+  &:nth-of-type(2) .ball{  @include ball-color($color-green);}
+  &:nth-of-type(3) .ball{  @include ball-color($color-blue);}
+}
+
+
+@keyframes ball-aspect-ratio{
+  from{
+    transform: scale3d(1, 1.2, 1);
+  }
+  to{
+    transform: scale3d(1, .4, 1);
+  }
 }
 
 .ball{
-  background: $color-teal;
+  animation: ball-aspect-ratio  linear infinite;
+  position: relative;
+  &:before{
+    content:"";
+    position:absolute;
+    top:2%;
+    left:2%;
+    width: 96%;
+    height:96%;
+    border-radius: 50%;
+    filter:blur(2px);
+    background-image:
+      radial-gradient(circle at 50% 0px, rgba(255, 255, 255, .9), rgba(255, 255, 255, .8) 10%, rgba(255, 255, 255, 0) 50%);
+  }
+    &:after{
+    content:"";
+    position:absolute;
+    top:90%;
+    left:10%;
+    width: 80%;
+    height:20%;
+    border-radius: 50%;
+    z-index:-1;
+    filter:blur(5px);
+    background-image:
+      radial-gradient(rgba(1, 1, 1, 1) 30%, rgba(1, 1, 1, 0) 100%);
+  }
+
 }
 
+
+
 }//better
+
+@keyframes shine{
+  0%{
+    filter:opacity(.3);
+    animation-timing-function: ease-in;
+  }
+  25%{
+    filter:opacity(.6);
+    animation-timing-function: ease-out;    
+  }
+  70%{
+    filter:opacity(1);
+    animation-timing-function: ease-in;    
+  }
+  100%{
+    filter:opacity(.3);
+    animation-timing-function: ease-out;    
+  }
+}
+
+#space{
+ animation: shine 5s infinite;
+ }
+
+#space, .stars {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #bf9af9, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #bf9af9, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #bf9af9, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #bf9af9, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+// animation: zoom 100s infinite;
+//  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 0% 50%;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 5s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 10s;
+}
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 9s;
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 8s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,100%,0);
+    animation-timing-function: ease-in;
+  } 
+  85% {
+    opacity: 1;
+ //   transform: scale(2.8);
+   animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0,0,0);
+//    transform: scale(3.5);
+  }
+}
